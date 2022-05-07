@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+  <link name="robot_footprint">
+  </link> 
+
+  <link name="base_link">
+    <origin xyz="0 0 0" rpy=" 0 0 0.1"/>
+    <!-- <collision>
+      <geometry>
+        <box size="0.9 0.65 0.01"/>
+       </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.225"/>
+    </collision> -->
+    <inertial>
+      <mass value="100"/>
+      <inertia ixx="0.166667" ixy="0.0" ixz="0.0" iyy="0.166667" iyz="0.0" izz="0.166667"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://husky_simulation/meshes/base_link.stl"/>
+       </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/> 
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://husky_simulation/meshes/top_plate.stl"/>
+       </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/> 
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://husky_simulation/meshes/bumper.stl"/>
+       </geometry>
+      <origin rpy="0 0 0" xyz="0.47 0 0.091"/> 
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://husky_simulation/meshes/bumper.stl"/>
+       </geometry>
+      <origin rpy="0 0 3.14" xyz="-0.47 0 0.091"/> 
+    </visual>
+  </link>
+ 
+  <link name="front">
+    <origin xyz="0 0 0" rpy=" 0 0 0"/>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.166667" ixy="0.0" ixz="0.0" iyy="0.166667" iyz="0.0" izz="0.166667"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.025" length="0.1"/>
+      </geometry>
+      <origin rpy="0 1.5707 0" xyz="0 0.1 0"/> 
+    </visual>
+    <visual>
+      <geometry>
+        <cylinder radius="0.025" length="0.1"/>
+      </geometry>
+      <origin rpy="0 1.5707 0" xyz="0 -0.1 0"/> 
+    </visual>
+  </link>
+  <joint name="front_joint" type="fixed">
+    <parent link="robot_footprint"/>
+    <child link="front"/>
+    <origin xyz="0.35 0 0.15" rpy="0 0 0" />
+  </joint>
+  
+  <link name="front_left_wheel">
+    <visual>
+      <geometry>
+        <mesh filename="package://husky_simulation/meshes/wheel.stl"/>
+      </geometry>
+      <origin rpy="-3.14 0 0" xyz="0 0 0"/> 
+    </visual>
+    <collision>
+      <geometry>
+      <cylinder length="0.1143" radius="0.17775"/>
+      </geometry>
+      <origin rpy="1.5707 0 0" xyz="0 0 0"/> 
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.14" ixy="0.0" ixz="0.0" iyy="0.14" iyz="0.0" izz="0.12"/>
+      <origin rpy="1.5707 0 0" xyz="0 0 0"/> 
+    </inertial>
+  </link>
+
+  <link name="front_right_wheel">
+    <visual>
+      <geometry>
+        <mesh filename="package://husky_simulation/meshes/wheel.stl"/>
+      </geometry>
+      <origin rpy="-3.14 0 0" xyz="0 0 0"/> 
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.1143" radius="0.17775"/>
+      </geometry>
+      <origin rpy="1.5707 0 0" xyz="0 0 0"/> 
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.14" ixy="0.0" ixz="0.0" iyy="0.14" iyz="0.0" izz="0.12"/>
+      <origin rpy="1.5707 0 0" xyz="0 0 0"/> 
+    </inertial>
+  </link>
+ 
+  <link name="back_left_wheel">
+    <visual>
+      <geometry>
+        <mesh filename="package://husky_simulation/meshes/wheel.stl"/>
+      </geometry>
+      <origin rpy="-3.14 0 0" xyz="0 0 0"/> 
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.1143" radius="0.17775"/>
+      </geometry>
+      <origin rpy="1.5707 0 0" xyz="0 0 0"/> 
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.14" ixy="0.0" ixz="0.0" iyy="0.14" iyz="0.0" izz="0.12"/>
+      <origin rpy="1.5707 0 0" xyz="0 0 0"/> 
+    </inertial>
+  </link>
+
+  <link name="back_right_wheel">
+    <visual>
+      <geometry>
+        <mesh filename="package://husky_simulation/meshes/wheel.stl"/>
+      </geometry>
+      <origin rpy="-3.14 0 0" xyz="0 0 0"/> 
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.1143" radius="0.17775"/>
+      </geometry>
+      <origin rpy="1.5707 0 0" xyz="0 0 0"/> 
+    </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.14" ixy="0.0" ixz="0.0" iyy="0.14" iyz="0.0" izz="0.12"/>
+      <origin rpy="1.5707 0 0" xyz="0 0 0"/> 
+    </inertial>
+  </link>
+
+  <joint name="robot_footprint_joint" type="fixed">
+    <parent link="robot_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <joint name="front_left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_left_wheel"/>
+    <origin rpy="0 0 0" xyz="0.256 0.285475 0.035"/>
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <dynamics damping="1.0" friction="1.0"/>
+    <limit effort="10000" velocity="1000"/>
+  </joint>
+  
+  <joint name="front_right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_right_wheel"/>
+    <origin rpy="0 0 0" xyz="0.256 -0.285475 0.035"/>
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <dynamics damping="1.0" friction="1.0"/>
+    <limit effort="10000" velocity="1000"/>
+  </joint>
+
+  <joint name="back_left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="back_left_wheel"/>
+    <origin rpy="0 0 0" xyz="-0.256 0.285475 0.035"/>
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <dynamics damping="1.0" friction="1.0"/>
+    <limit effort="10000" velocity="1000"/>
+  </joint>
+
+  <joint name="back_right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="back_right_wheel"/>
+    <origin rpy="0 0 0" xyz="-0.256 -0.285475 0.035"/>
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <dynamics damping="1.0" friction="1.0"/>
+    <limit effort="10000" velocity="1000"/>
+  </joint>
+
+  <gazebo>
+    <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+      <updateRate>100.0</updateRate>
+      <robotNamespace>/</robotNamespace>
+      <leftFrontJoint>front_left_wheel_joint</leftFrontJoint>
+      <rightFrontJoint>front_right_wheel_joint</rightFrontJoint>
+      <leftRearJoint>back_left_wheel_joint</leftRearJoint>
+      <rightRearJoint>back_right_wheel_joint</rightRearJoint>
+      <wheelSeparation>0.57095</wheelSeparation>
+      <wheelDiameter>0.3555</wheelDiameter>
+      <robotBaseFrame>robot_footprint</robotBaseFrame>
+      <torque>50</torque>
+      <topicName>cmd_vel</topicName>
+      <broadcastTF>true</broadcastTF>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="base_link">
+   <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="front_left_wheel">
+    <material>Gazebo/Grey</material>
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+    <selfCollide>true</selfCollide>
+    <minDepth>0.003</minDepth>
+  </gazebo>
+  <gazebo reference="back_left_wheel">
+    <material>Gazebo/Grey</material>
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+    <selfCollide>true</selfCollide>
+    <minDepth>0.003</minDepth>
+  </gazebo>
+  <gazebo reference="back_right_wheel">
+    <material>Gazebo/Grey</material>
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+    <selfCollide>true</selfCollide>
+    <minDepth>0.003</minDepth>
+  </gazebo>
+  <gazebo reference="front_right_wheel">
+    <material>Gazebo/Grey</material>
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>
+    <selfCollide>true</selfCollide>
+    <minDepth>0.003</minDepth>
+  </gazebo>
+  <gazebo reference="robot_footprint">
+    <gravity>true</gravity>
+  </gazebo>
+  <gazebo reference="front">
+    <material>Gazebo/White</material>
+  </gazebo>
+  
+</robot>
