@@ -12,8 +12,8 @@
 
   <param name="robot_description" command="$(find xacro)/xacro $(find husky_simulation)/urdf/husky.xacro"/>
 
-  <arg name="x" default="-8"/>
-  <arg name="y" default="8"/>
+  <arg name="x" default="-9"/>
+  <arg name="y" default="4"/>
   <arg name="z" default="3"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
