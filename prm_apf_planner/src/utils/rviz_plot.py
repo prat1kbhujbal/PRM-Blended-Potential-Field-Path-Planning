@@ -10,9 +10,9 @@ def main():
     rospy.init_node('path')
     rospack = rospkg.RosPack()
     rospy.loginfo('Publishing Path')
-    fp = rospack.get_path("prm_apf_planner")
+    file_path = rospack.get_path("prm_apf_planner")
     publisher = rospy.Publisher('/paths', MarkerArray, queue_size=1)
-    data = pd.read_csv(fp + '/results/data.csv')
+    data = pd.read_csv(file_path + '/results/data.csv')
     Y = data['x'].values
     X = data['y'].values
     Xn = len(X) + 17 - Y

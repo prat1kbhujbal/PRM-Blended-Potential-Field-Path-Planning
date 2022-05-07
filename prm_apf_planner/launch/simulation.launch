@@ -1,4 +1,8 @@
 <launch>
+  
   <include file="$(find prm_apf_planner)/launch/gazebo.launch"/>
   <include file="$(find prm_apf_planner)/launch/rviz.launch"/>
+
+  <arg name="node_start_delay" default="5.0" />  
+  <node name="controller" pkg="prm_apf_planner" type="controller.py" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' " />
 </launch>

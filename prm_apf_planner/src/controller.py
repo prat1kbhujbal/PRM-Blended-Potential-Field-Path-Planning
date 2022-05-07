@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import rospy
+import rospkg
 import numpy as np
 import pandas as pd
 from math import atan2
@@ -21,7 +22,9 @@ def poseCallback(msg):
 
 
 def main():
-    data = pd.read_csv('../results/data.csv')
+    rospack = rospkg.RosPack()
+    file_path = rospack.get_path("prm_apf_planner")
+    data = pd.read_csv(file_path + '/results/data.csv')
     Y = data['x'].values
     X = data['y'].values
     pub = rospy.Publisher("/cmd_vel", Twist, queue_size=100)
