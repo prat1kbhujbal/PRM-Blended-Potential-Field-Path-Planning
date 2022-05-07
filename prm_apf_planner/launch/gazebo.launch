@@ -1,0 +1,34 @@
+<launch>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find prm_apf_planner)/worlds/terrain.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+    <arg name="verbose" value="false"/>
+  </include>
+
+  <param name="robot_description" command="$(find xacro)/xacro $(find husky_simulation)/urdf/husky.xacro"/>
+
+  <arg name="x" default="-8"/>
+  <arg name="y" default="8"/>
+  <arg name="z" default="3"/>
+  <arg name="roll" default="0"/>
+  <arg name="pitch" default="0"/>
+  <arg name="yaw" default="0"/>
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-param robot_description -urdf -model husky -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
+
+  <!-- Send robot states to tf -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+
+  <!-- Send robot joint values-->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="false"/>
+  </node>
+  <include file="$(find grid_map_demos)/launch/image_to_gridmap_demo.launch"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="map_odom" args="0 0 0 -1.57075 0 0 /map /odom 100"/>
+</launch>
