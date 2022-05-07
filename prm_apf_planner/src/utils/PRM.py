@@ -35,7 +35,7 @@ class PRM:
         plt.savefig("../results/final_path.png")
         plt.show()
 
-    def samplingCoords(self, maxSizeOfMap=100):
+    def samplingCoords(self):
         no_of_samples_obs = int(self.sampling_points / 5)
         no_of_samples_wr = int(no_of_samples_obs * 2)
         sample_obs_idx = np.random.randint(

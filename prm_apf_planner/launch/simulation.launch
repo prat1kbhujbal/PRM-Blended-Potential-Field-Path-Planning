@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find prm_apf_planner)/launch/gazebo.launch"/>
+  <include file="$(find prm_apf_planner)/launch/rviz.launch"/>
+</launch>

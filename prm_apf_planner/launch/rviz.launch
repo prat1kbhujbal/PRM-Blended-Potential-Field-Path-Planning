@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find grid_map_demos)/launch/image_to_gridmap_demo.launch"/>
+  <node pkg="tf" type="static_transform_publisher" name="map_odom" args="0 0 0 -1.57075 0 0 /map /odom 100"/>
+  <node name="path" pkg="prm_apf_planner" type="rviz_plot.py" output="screen"/>
+</launch>

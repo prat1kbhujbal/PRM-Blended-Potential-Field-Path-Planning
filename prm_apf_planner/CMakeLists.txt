@@ -26,10 +26,16 @@ include_directories(
   include
   ${catkin_INCLUDE_DIRS}
 )
-
+catkin_package(
+  INCLUDE_DIRS src/ results/
+#  LIBRARIES planner
+#  CATKIN_DEPENDS geometry_msgs rospy std_msgs
+#  DEPENDS system_lib
+)
 install(DIRECTORY 
   launch 
   worlds 
   models
+  results
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
     PATTERN "*~" EXCLUDE)

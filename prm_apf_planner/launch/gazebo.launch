@@ -28,7 +28,4 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
     <param name="use_gui" value="false"/>
   </node>
-  <include file="$(find grid_map_demos)/launch/image_to_gridmap_demo.launch"/>
-
-  <node pkg="tf" type="static_transform_publisher" name="map_odom" args="0 0 0 -1.57075 0 0 /map /odom 100"/>
 </launch>
