@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
 )
 
+
 catkin_package(
   CATKIN_DEPENDS xacro gazebo_ros
 )
