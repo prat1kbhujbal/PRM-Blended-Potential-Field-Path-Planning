@@ -22,7 +22,6 @@ Probabilistic roadmap (PRM) algorithm generates graphs to perform path planning 
 - Matplotlib
 - sklearn
 - shapely
-- 
 ### Install ROS dependencies
 ```
 cd <your_workspace>/
@@ -74,7 +73,8 @@ Around the Obstacle | Heatmap
 ![gif](./prm_apf_planner/results/demo-video.gif) 
 
 ## Authors
-
+- Pratik Bhujbal [github](https://github.com/Prat33k-dev)
+- Maaruf Vazifdar [github]()
 ## Refrences
 > [1] H. You, G. Chen, Q. Jia and Z. Huang, 
 > "Path Planning for Robot in Multi-
