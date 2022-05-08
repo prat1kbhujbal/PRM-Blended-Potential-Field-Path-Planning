@@ -16,7 +16,7 @@ def main():
         '--goal', nargs='+', type=int, default=[19, 19],
         help='goal. Default: [19, 19]')
     parser.add_argument(
-        '--FilePath', default='../map/map.png',
+        '--FilePath', default='./map/map.png',
         help='map file path')
     args = parser.parse_args()
     file_path = args.FilePath
