@@ -24,6 +24,7 @@ class PRM:
         self.pathFound = False
 
     def prm(self):
+        print("Solving...")
         while(not self.pathFound):
             self.samplingCoords()
             self.checkForObstacle()
