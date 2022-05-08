@@ -13,6 +13,21 @@ Probabilistic roadmap (PRM) algorithm generates graphs to perform path planning 
 3) Using bounding range for open area and obstacle region sampling point can be distributed in the map.
 
 ## Dependencies
+- Ubuntu18
+- ROS Melodic
+- python3.x
+- NumPy
+- cv2
+- panda
+- Matplotlib
+- sklearn
+- shapely
+- 
+### Install ROS dependencies
+```
+cd <your_workspace>/
+rosdep install --from-paths src --ignore-src -r -y
+```
 
 ## Steps to run the code
 ### Building
