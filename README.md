@@ -73,8 +73,8 @@ Around the Obstacle | Heatmap
 ![gif](./prm_apf_planner/results/demo-video.gif) 
 
 ## Authors
-- Pratik Bhujbal [github](https://github.com/Prat33k-dev)
-- Maaruf Vazifdar [github](https://github.com/maarufvazifdar)
+- Pratik Bhujbal [GitHub](https://github.com/Prat33k-dev)
+- Maaruf Vazifdar [GitHub](https://github.com/maarufvazifdar)
 ## Refrences
 > [1] H. You, G. Chen, Q. Jia and Z. Huang, 
 > "Path Planning for Robot in Multi-
