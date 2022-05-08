@@ -11,12 +11,12 @@ def main():
         description='PRM-Blended-Potential-Field-Path-Planning')
     parser.add_argument(
         '--start', nargs='+', type=int, default=[6, 1],
-        help='start. Default: [2, 2]')
+        help='start. Default: [6, 1]')
     parser.add_argument(
         '--goal', nargs='+', type=int, default=[19, 19],
         help='goal. Default: [19, 19]')
     parser.add_argument(
-        '--FilePath', default='../map/map2.png',
+        '--FilePath', default='../map/map.png',
         help='map file path')
     args = parser.parse_args()
     file_path = args.FilePath
