@@ -66,7 +66,7 @@ Around the Obstacle | Heatmap
 > dimensional Environment Based on Dynamic PRM Blended Potential
 > Field," 2021 IEEE 5th Information Technology,Networking,Electronic
 > and Automation Control Conference (ITNEC), 2021, pp. 1157-1162, doi:
-> [10.1109/ITNEC52019.2021.9586848. ([PDF](https://ieeexplore.ieee.org/abstract/document/9586848?casa_token=dPIeCWMbyvUAAAAA:jaPm7QkSNuVRAEtBoYQxnqkooVTZvR46ZT57qmRl7oLrsUHyPHaxxCWyf2-y8w6I4ts5512YXQ))
+> 10.1109/ITNEC52019.2021.9586848. ([Link](https://ieeexplore.ieee.org/abstract/document/9586848?casa_token=dPIeCWMbyvUAAAAA:jaPm7QkSNuVRAEtBoYQxnqkooVTZvR46ZT57qmRl7oLrsUHyPHaxxCWyf2-y8w6I4ts5512YXQ))
 
 > [2] P. Fankhauser and M. Hutter,
 > **"A Universal Grid Map Library: Implementation and Use Case for Rough Terrain Navigation"**,
