@@ -109,7 +109,7 @@ class PRM:
         pointsToEnd = [self.findPoints(path)
                        for path in end_path]
         print("Path Found !!!")
-        print("Coordinates saved in /data.csv")
+        print("Coordinates saved in results/data.csv")
         CSVFile_path = "../results/data.csv"
         header = [['x', 'y']]
         with open(CSVFile_path, 'w', encoding='UTF8', newline='') as f:
