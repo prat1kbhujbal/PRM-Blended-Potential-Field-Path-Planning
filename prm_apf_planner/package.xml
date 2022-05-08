@@ -51,8 +51,6 @@
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_depend>rospy</build_depend>
-  <build_depend>python-shapely</build_depend>
-  <exec_depend>python-shapely</exec_depend>
   <build_depend>std_msgs</build_depend>
   <build_export_depend>geometry_msgs</build_export_depend>
   <build_export_depend>rospy</build_export_depend>
@@ -63,6 +61,7 @@
   <build_depend>xacro</build_depend>
   <exec_depend>xacro</exec_depend>
   <depend>gazebo_ros</depend>
+  <depend>python-shapely</depend>
 
 
 
