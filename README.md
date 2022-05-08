@@ -12,6 +12,8 @@ Probabilistic roadmap (PRM) algorithm generates graphs to perform path planning 
 2) Determine Number of Sampling Points.
 3) Using bounding range for open area and obstacle region sampling point can be distributed in the map.
 
+## Dependencies
+
 ## Steps to run the code
 ### Building
 ```bash
@@ -55,6 +57,8 @@ Around the Obstacle | Heatmap
 
 ### **Demonstration**
 ![gif](./prm_apf_planner/results/demo-video.gif) 
+
+## Authors
 
 ## Refrences
 > [1] H. You, G. Chen, Q. Jia and Z. Huang, 
