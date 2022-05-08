@@ -24,30 +24,26 @@ Probabilistic roadmap (PRM) algorithm generates graphs to perform path planning 
 - Matplotlib
 - sklearn
 - shapely
-### Install ROS dependencies
-```
-cd <your_workspace>/
-rosdep install --from-paths src --ignore-src -r -y
-```
 
 ## Steps to run the code
-### Building
+### Build and Install ROS dependencies
 ```bash
 cd <your_workspace>/src
 git clone https://github.com/Prat33k-dev/PRM-Blended-Potential-Field-Path-Planning.git
 cd ../
+rosdep install --from-paths src --ignore-src -r -y
 catkin_make
 ```
 ### Genrate path coordinates file
 First need to genrate .csv file of path coordinates to follow from start to goal location. 
 ```bash
 cd <your_workspace>/src/PRM-Blended-Potential-Field-Path-Planning/prm_apf_planner
-python3 src/main.py --start 6 1 --goal 19 19 --FilePath '../map/map.png' 
+python3 src/main.py --start 6 1 --goal 19 19 --FilePath './map/map.png' 
 ```
 #### Parameters
 - start -  Start position of the robot. *Default :- [6 1]*
 - goal - Goal position of the robot. *Default :- [19 19]*
-- FilePath -  map file path. *Default :- '../map/map.png'*
+- FilePath -  map file path. *Default :- './map/map.png'*
 
 ### Run the simulation
 ```bash
