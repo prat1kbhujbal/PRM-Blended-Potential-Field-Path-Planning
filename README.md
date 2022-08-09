@@ -2,6 +2,7 @@
 ## Overview
 Probabilistic roadmap (PRM) algorithm generates graphs to perform path planning with complex constraints and high dimensions but has some limitations in situations like narrow pathways and environments with dynamic obstacles. This drawback of PRM is usually solved by increasing the number of randomly generated sampling points. However, too many sampling points will increase the computational complexity resulting in poor performance. Hence to overcome these limitations PRM with potential fields can be implemented. Potential field can be generated for the workspace, will help determine the complexity of workspace and adequate number of sampling points required, and then ensure high density of sampling points around the obstacles by implementing a regional sampling strategy.
 
+
 [**Project Report**](./Report.pdf)
 
 <p align="middle">
