@@ -71,7 +71,7 @@ Around the Obstacle | Heatmap
 ![gif](./prm_apf_planner/results/demo-video.gif) 
 
 ## Authors
-- Pratik Bhujbal [GitHub](https://github.com/Prat33k-dev)
+- Pratik Bhujbal [GitHub](https://github.com/prat1kbhujbal)
 - Maaruf Vazifdar [GitHub](https://github.com/maarufvazifdar)
 ## Refrences
 > [1] H. You, G. Chen, Q. Jia and Z. Huang, 
