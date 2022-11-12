@@ -83,6 +83,6 @@ Around the Obstacle | Heatmap
 
 > [2] P. Fankhauser and M. Hutter,
 > **"A Universal Grid Map Library: Implementation and Use Case for Rough Terrain Navigation"**,
-> in Robot Operating System (ROS) – The Complete Reference (Volume 1), A. Koubaa (Ed.), Springer, 2016. ([PDF](http://www.researchgate.net/publication/284415855))
+> in Robot Operating System (ROS) – The Complete Reference (Volume 1), A. Koubaa (Ed.), Springer, 2016. ([Link](http://www.researchgate.net/publication/284415855))
 
 > [3] https://www.cs.cmu.edu/~motionplanning/lecture/Chap4-Potential-Field_howie.pdf.
